@@ -1,0 +1,288 @@
+Pojazd,Kierowca,Data i Godzina,Cel Trasy,Stan Licznika,Tankowanie
+Honda Civic,Anna Kowalska,01.03.2025 08:00,Warszawa → Kraków,0,Fałsz
+Honda Civic,Anna Kowalska,03.03.2025 19:30,Powrót,620,True
+Honda Civic,Anna Kowalska,25.03.2025 07:45,Warszawa → Lublin,620,Fałsz
+Honda Civic,Anna Kowalska,25.03.2025 16:30,Powrót,790,Fałsz
+Honda Civic,Anna Kowalska,05.04.2025 07:00,Poznań → Gdańsk,790,Fałsz
+Honda Civic,Anna Kowalska,05.04.2025 12:30,Powrót,1100,Fałsz
+Honda Civic,Anna Kowalska,12.04.2025 08:15,Lublin → Kraków,1100,Fałsz
+Honda Civic,Anna Kowalska,12.04.2025 13:45,Powrót,1270,Fałsz
+Honda Civic,Anna Kowalska,22.04.2025 07:30,Warszawa → Wrocław,1270,Fałsz
+Honda Civic,Anna Kowalska,22.04.2025 13:00,Powrót,1610,Fałsz
+Honda Civic,Anna Kowalska,03.05.2025 07:10,Lublin → Warszawa,1610,Fałsz
+Honda Civic,Anna Kowalska,03.05.2025 12:40,Powrót,1780,Fałsz
+Honda Civic,Jan Nowak,05.05.2025 08:00,Warszawa → Poznań,1780,Fałsz
+Honda Civic,Anna Kowalska,05.05.2025 13:30,Powrót,2100,True
+Honda Civic,Anna Kowalska,10.05.2025 09:00,Kraków → Łódź,2100,Fałsz
+Honda Civic,Anna Kowalska,10.05.2025 14:15,Powrót,2380,Fałsz
+Honda Civic,Anna Kowalska,15.05.2025 07:45,Wrocław → Warszawa,2380,Fałsz
+Honda Civic,Anna Kowalska,15.05.2025 13:20,Powrót,2700,True
+Honda Civic,Anna Kowalska,18.05.2025 08:10,Poznań → Kraków,2700,Fałsz
+Honda Civic,Anna Kowalska,18.05.2025 14:00,Powrót,3000,Fałsz
+Honda Civic,Piotr Wiśniewski,20.05.2025 09:30,Lublin → Warszawa,3000,Fałsz
+Honda Civic,Anna Kowalska,20.05.2025 15:00,Powrót,3180,True
+Honda Civic,Anna Kowalska,22.05.2025 07:20,Warszawa → Gdańsk,3180,Fałsz
+Honda Civic,Anna Kowalska,22.05.2025 13:50,Powrót,3520,Fałsz
+Honda Civic,Anna Kowalska,25.05.2025 08:00,Łódź → Wrocław,3520,Fałsz
+Honda Civic,Anna Kowalska,25.05.2025 12:40,Powrót,3850,Fałsz
+Honda Civic,Anna Kowalska,28.05.2025 07:10,Kraków → Warszawa,3850,True
+Honda Civic,Anna Kowalska,28.05.2025 14:30,Powrót,4180,Fałsz
+Honda Civic,Anna Kowalska,30.05.2025 08:00,Lublin → Poznań,4180,Fałsz
+Honda Civic,Anna Kowalska,30.05.2025 16:10,Powrót,4550,True
+Honda Civic,Anna Kowalska,01.06.2025 07:50,Warszawa → Łódź,4550,Fałsz
+Honda Civic,Anna Kowalska,01.06.2025 13:30,Powrót,4820,Fałsz
+Honda Civic,Anna Kowalska,03.06.2025 08:15,Poznań → Wrocław,4820,Fałsz
+Honda Civic,Anna Kowalska,03.06.2025 14:00,Powrót,5200,True
+Honda Civic,Anna Kowalska,05.06.2025 07:30,Kraków → Gdańsk,5200,Fałsz
+Honda Civic,Anna Kowalska,05.06.2025 13:50,Powrót,5520,Fałsz
+Honda Civic,Anna Kowalska,07.06.2025 08:05,Warszawa → Lublin,5520,Fałsz
+Honda Civic,Anna Kowalska,07.06.2025 13:40,Powrót,5820,Fałsz
+Honda Civic,Anna Kowalska,10.06.2025 07:20,Lublin → Kraków,5820,True
+Honda Civic,Anna Kowalska,10.06.2025 12:50,Powrót,6120,Fałsz
+Honda Civic,Anna Kowalska,12.06.2025 08:10,Łódź → Warszawa,6120,Fałsz
+Honda Civic,Anna Kowalska,12.06.2025 14:00,Powrót,6420,Fałsz
+Honda Civic,Anna Kowalska,15.06.2025 07:40,Wrocław → Poznań,6420,Fałsz
+Honda Civic,Anna Kowalska,15.06.2025 12:30,Powrót,6720,True
+Honda Civic,Anna Kowalska,18.06.2025 08:00,Gdańsk → Kraków,6720,Fałsz
+Honda Civic,Anna Kowalska,18.06.2025 14:15,Powrót,7000,Fałsz
+Honda Civic,Anna Kowalska,20.06.2025 07:50,Warszawa → Wrocław,7000,Fałsz
+Honda Civic,Anna Kowalska,20.06.2025 13:20,Powrót,7350,Fałsz
+Honda Civic,Anna Kowalska,22.06.2025 08:10,Kraków → Łódź,7350,Fałsz
+Honda Civic,Anna Kowalska,22.06.2025 14:00,Powrót,7650,True
+Honda Civic,Anna Kowalska,25.06.2025 07:30,Lublin → Warszawa,7650,Fałsz
+Honda Civic,Anna Kowalska,25.06.2025 13:10,Powrót,7900,Fałsz
+Honda Civic,Anna Kowalska,28.06.2025 08:00,Poznań → Gdańsk,7900,Fałsz
+Honda Civic,Anna Kowalska,28.06.2025 14:30,Powrót,8250,True
+Honda Civic,Anna Kowalska,30.06.2025 07:20,Wrocław → Kraków,8250,Fałsz
+Honda Civic,Anna Kowalska,30.06.2025 12:50,Powrót,8600,Fałsz
+Honda Civic,Jan Nowak,02.07.2025 08:10,Warszawa → Łódź,8600,Fałsz
+Honda Civic,Anna Kowalska,02.07.2025 13:40,Powrót,8850,True
+Honda Civic,Anna Kowalska,05.07.2025 07:30,Lublin → Wrocław,8850,Fałsz
+Honda Civic,Anna Kowalska,05.07.2025 13:20,Powrót,9150,Fałsz
+Honda Civic,Anna Kowalska,08.07.2025 08:05,Poznań → Warszawa,9150,Fałsz
+Honda Civic,Anna Kowalska,08.07.2025 14:00,Powrót,9450,True
+Honda Civic,Anna Kowalska,10.07.2025 07:50,Kraków → Gdańsk,9450,Fałsz
+Honda Civic,Anna Kowalska,10.07.2025 13:30,Powrót,9800,Fałsz
+Tesla Roadster,Michał Nowicki,01.03.2025 08:00,Warszawa → Kraków,0,Fałsz
+Tesla Roadster,Michał Nowicki,01.03.2025 13:30,Powrót,310,True
+Tesla Roadster,Michał Nowicki,05.03.2025 09:00,Poznań → Gdańsk,310,Fałsz
+Tesla Roadster,Michał Nowicki,05.03.2025 15:20,Powrót,650,Fałsz
+Tesla Roadster,Michał Nowicki,10.03.2025 08:15,Lublin → Warszawa,650,Fałsz
+Tesla Roadster,Michał Nowicki,10.03.2025 13:45,Powrót,890,True
+Tesla Roadster,Michał Nowicki,15.03.2025 07:50,Wrocław → Kraków,890,Fałsz
+Tesla Roadster,Michał Nowicki,15.03.2025 13:10,Powrót,1120,Fałsz
+Tesla Roadster,Anna Kowalska,18.03.2025 09:30,Warszawa → Łódź,1120,Fałsz
+Tesla Roadster,Michał Nowicki,18.03.2025 14:20,Powrót,1350,Fałsz
+Tesla Roadster,Michał Nowicki,22.03.2025 08:10,Gdańsk → Poznań,1350,Fałsz
+Tesla Roadster,Michał Nowicki,22.03.2025 14:00,Powrót,1600,True
+Tesla Roadster,Michał Nowicki,25.03.2025 07:45,Kraków → Lublin,1600,Fałsz
+Tesla Roadster,Michał Nowicki,25.03.2025 13:15,Powrót,1850,Fałsz
+Tesla Roadster,Piotr Wiśniewski,28.03.2025 08:00,Warszawa → Wrocław,1850,Fałsz
+Tesla Roadster,Michał Nowicki,28.03.2025 14:30,Powrót,2100,True
+Tesla Roadster,Michał Nowicki,01.04.2025 08:20,Lublin → Kraków,2100,Fałsz
+Tesla Roadster,Michał Nowicki,01.04.2025 13:50,Powrót,2350,Fałsz
+Tesla Roadster,Michał Nowicki,05.04.2025 07:30,Poznań → Warszawa,2350,Fałsz
+Tesla Roadster,Michał Nowicki,05.04.2025 13:00,Powrót,2620,True
+Tesla Roadster,Michał Nowicki,08.04.2025 08:15,Wrocław → Gdańsk,2620,Fałsz
+Tesla Roadster,Michał Nowicki,08.04.2025 14:10,Powrót,2900,Fałsz
+Tesla Roadster,Michał Nowicki,12.04.2025 07:50,Lublin → Poznań,2900,Fałsz
+Tesla Roadster,Michał Nowicki,12.04.2025 13:30,Powrót,3180,True
+Tesla Roadster,Michał Nowicki,15.04.2025 08:00,Warszawa → Kraków,3180,Fałsz
+Tesla Roadster,Michał Nowicki,15.04.2025 14:00,Powrót,3450,Fałsz
+Tesla Roadster,Michał Nowicki,18.04.2025 07:40,Poznań → Łódź,3450,Fałsz
+Tesla Roadster,Michał Nowicki,18.04.2025 13:20,Powrót,3720,True
+Tesla Roadster,Michał Nowicki,20.04.2025 08:10,Gdańsk → Warszawa,3720,Fałsz
+Tesla Roadster,Michał Nowicki,20.04.2025 14:00,Powrót,4000,Fałsz
+Tesla Roadster,Michał Nowicki,22.04.2025 07:50,Kraków → Wrocław,4000,Fałsz
+Tesla Roadster,Michał Nowicki,22.04.2025 13:30,Powrót,4300,True
+Tesla Roadster,Michał Nowicki,25.04.2025 08:00,Lublin → Kraków,4300,Fałsz
+Tesla Roadster,Michał Nowicki,25.04.2025 14:10,Powrót,4600,Fałsz
+Tesla Roadster,Michał Nowicki,28.04.2025 07:40,Warszawa → Poznań,4600,Fałsz
+Tesla Roadster,Michał Nowicki,28.04.2025 13:20,Powrót,4900,True
+Tesla Roadster,Michał Nowicki,30.04.2025 08:10,Wrocław → Gdańsk,4900,Fałsz
+Tesla Roadster,Michał Nowicki,30.04.2025 14:00,Powrót,5200,Fałsz
+Tesla Roadster,Michał Nowicki,03.05.2025 07:50,Lublin → Warszawa,5200,Fałsz
+Tesla Roadster,Michał Nowicki,03.05.2025 13:30,Powrót,5500,True
+Tesla Roadster,Michał Nowicki,05.05.2025 08:15,Poznań → Kraków,5500,Fałsz
+Tesla Roadster,Michał Nowicki,05.05.2025 14:10,Powrót,5800,Fałsz
+Tesla Roadster,Michał Nowicki,08.05.2025 07:45,Gdańsk → Łódź,5800,Fałsz
+Tesla Roadster,Michał Nowicki,08.05.2025 13:40,Powrót,6100,True
+Tesla Roadster,Michał Nowicki,10.05.2025 08:00,Warszawa → Wrocław,6100,Fałsz
+Tesla Roadster,Michał Nowicki,10.05.2025 14:00,Powrót,6400,Fałsz
+Tesla Roadster,Michał Nowicki,12.05.2025 07:50,Lublin → Poznań,6400,Fałsz
+Tesla Roadster,Michał Nowicki,12.05.2025 13:30,Powrót,6700,True
+Tesla Roadster,Michał Nowicki,15.05.2025 08:10,Kraków → Warszawa,6700,Fałsz
+Tesla Roadster,Michał Nowicki,15.05.2025 14:00,Powrót,7000,Fałsz
+Tesla Roadster,Michał Nowicki,18.05.2025 07:50,Poznań → Gdańsk,7000,Fałsz
+Tesla Roadster,Michał Nowicki,18.05.2025 14:00,Powrót,7300,True
+BMW M3,Karolina Wójcik,01.03.2025 08:00,Warszawa → Kraków,0,Fałsz
+BMW M3,Karolina Wójcik,01.03.2025 13:30,Powrót,310,True
+BMW M3,Karolina Wójcik,04.03.2025 09:15,Poznań → Gdańsk,310,Fałsz
+BMW M3,Karolina Wójcik,04.03.2025 14:50,Powrót,660,Fałsz
+BMW M3,Karolina Wójcik,08.03.2025 08:10,Lublin → Warszawa,660,Fałsz
+BMW M3,Karolina Wójcik,08.03.2025 13:40,Powrót,910,True
+BMW M3,Karolina Wójcik,12.03.2025 07:45,Wrocław → Kraków,910,Fałsz
+BMW M3,Karolina Wójcik,12.03.2025 13:05,Powrót,1150,Fałsz
+BMW M3,Paweł Nowak,15.03.2025 09:00,Warszawa → Łódź,1150,Fałsz
+BMW M3,Karolina Wójcik,15.03.2025 13:50,Powrót,1380,Fałsz
+BMW M3,Karolina Wójcik,18.03.2025 08:20,Gdańsk → Poznań,1380,Fałsz
+BMW M3,Karolina Wójcik,18.03.2025 14:10,Powrót,1640,True
+BMW M3,Karolina Wójcik,22.03.2025 07:50,Kraków → Lublin,1640,Fałsz
+BMW M3,Karolina Wójcik,22.03.2025 13:30,Powrót,1900,Fałsz
+BMW M3,Karolina Wójcik,25.03.2025 08:10,Warszawa → Wrocław,1900,Fałsz
+BMW M3,Karolina Wójcik,25.03.2025 14:00,Powrót,2160,True
+BMW M3,Karolina Wójcik,28.03.2025 07:45,Lublin → Kraków,2160,Fałsz
+BMW M3,Karolina Wójcik,28.03.2025 13:30,Powrót,2430,Fałsz
+BMW M3,Karolina Wójcik,01.04.2025 08:15,Poznań → Warszawa,2430,Fałsz
+BMW M3,Karolina Wójcik,01.04.2025 13:50,Powrót,2710,True
+BMW M3,Karolina Wójcik,05.04.2025 07:50,Wrocław → Gdańsk,2710,Fałsz
+BMW M3,Karolina Wójcik,05.04.2025 14:00,Powrót,2990,Fałsz
+BMW M3,Karolina Wójcik,08.04.2025 07:40,Lublin → Poznań,2990,Fałsz
+BMW M3,Karolina Wójcik,08.04.2025 13:20,Powrót,3270,True
+BMW M3,Karolina Wójcik,12.04.2025 08:10,Warszawa → Kraków,3270,Fałsz
+BMW M3,Karolina Wójcik,12.04.2025 14:00,Powrót,3550,Fałsz
+BMW M3,Karolina Wójcik,15.04.2025 07:50,Poznań → Łódź,3550,Fałsz
+BMW M3,Karolina Wójcik,15.04.2025 13:30,Powrót,3830,True
+BMW M3,Karolina Wójcik,18.04.2025 08:00,Gdańsk → Warszawa,3830,Fałsz
+BMW M3,Karolina Wójcik,18.04.2025 13:50,Powrót,4110,Fałsz
+BMW M3,Karolina Wójcik,22.04.2025 07:45,Kraków → Wrocław,4110,Fałsz
+BMW M3,Karolina Wójcik,22.04.2025 13:30,Powrót,4400,True
+BMW M3,Karolina Wójcik,25.04.2025 08:10,Lublin → Kraków,4400,Fałsz
+BMW M3,Karolina Wójcik,25.04.2025 14:00,Powrót,4690,Fałsz
+BMW M3,Karolina Wójcik,28.04.2025 07:50,Warszawa → Poznań,4690,Fałsz
+BMW M3,Karolina Wójcik,28.04.2025 13:30,Powrót,4980,True
+BMW M3,Karolina Wójcik,30.04.2025 08:00,Wrocław → Gdańsk,4980,Fałsz
+BMW M3,Karolina Wójcik,30.04.2025 14:00,Powrót,5270,Fałsz
+BMW M3,Karolina Wójcik,03.05.2025 07:50,Lublin → Warszawa,5270,Fałsz
+BMW M3,Karolina Wójcik,03.05.2025 13:40,Powrót,5560,True
+BMW M3,Karolina Wójcik,05.05.2025 08:15,Poznań → Kraków,5560,Fałsz
+BMW M3,Karolina Wójcik,05.05.2025 14:00,Powrót,5850,Fałsz
+BMW M3,Karolina Wójcik,08.05.2025 07:50,Gdańsk → Łódź,5850,Fałsz
+BMW M3,Karolina Wójcik,08.05.2025 13:40,Powrót,6140,True
+BMW M3,Karolina Wójcik,10.05.2025 08:10,Warszawa → Wrocław,6140,Fałsz
+BMW M3,Karolina Wójcik,10.05.2025 14:00,Powrót,6430,Fałsz
+BMW M3,Karolina Wójcik,12.05.2025 07:50,Lublin → Poznań,6430,Fałsz
+BMW M3,Karolina Wójcik,12.05.2025 13:30,Powrót,6720,True
+BMW M3,Karolina Wójcik,15.05.2025 08:10,Kraków → Warszawa,6720,Fałsz
+BMW M3,Karolina Wójcik,15.05.2025 14:00,Powrót,7010,Fałsz
+BMW M3,Karolina Wójcik,18.05.2025 07:50,Poznań → Gdańsk,7010,Fałsz
+BMW M3,Karolina Wójcik,18.05.2025 14:00,Powrót,7300,True
+Porsche 911 Carrera,Michał Kaczmarek,01.03.2025 08:00,Warszawa → Kraków,0,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,01.03.2025 13:30,Powrót,310,True
+Porsche 911 Carrera,Michał Kaczmarek,03.03.2025 09:00,Poznań → Gdańsk,310,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,03.03.2025 14:30,Powrót,660,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,05.03.2025 08:20,Lublin → Warszawa,660,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,05.03.2025 13:50,Powrót,910,True
+Porsche 911 Carrera,Michał Kaczmarek,08.03.2025 08:15,Wrocław → Kraków,910,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,08.03.2025 13:50,Powrót,1150,Fałsz
+Porsche 911 Carrera,Anna Nowak,12.03.2025 09:00,Warszawa → Łódź,1150,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,12.03.2025 13:50,Powrót,1380,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,15.03.2025 08:10,Gdańsk → Poznań,1380,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,15.03.2025 14:00,Powrót,1640,True
+Porsche 911 Carrera,Michał Kaczmarek,18.03.2025 07:50,Kraków → Lublin,1640,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,18.03.2025 13:40,Powrót,1900,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,21.03.2025 08:10,Warszawa → Wrocław,1900,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,21.03.2025 14:00,Powrót,2160,True
+Porsche 911 Carrera,Michał Kaczmarek,24.03.2025 08:20,Lublin → Kraków,2160,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,24.03.2025 14:10,Powrót,2430,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,27.03.2025 07:50,Poznań → Warszawa,2430,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,27.03.2025 13:40,Powrót,2710,True
+Porsche 911 Carrera,Michał Kaczmarek,02.04.2025 08:15,Kraków → Poznań,3040,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,02.04.2025 14:20,Powrót,3380,True
+Porsche 911 Carrera,Michał Kaczmarek,05.04.2025 07:50,Lublin → Wrocław,3380,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,05.04.2025 14:00,Powrót,3700,Fałsz
+Porsche 911 Carrera,Anna Nowak,08.04.2025 08:00,Warszawa → Łódź,3700,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,08.04.2025 13:40,Powrót,3940,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,11.04.2025 08:10,Poznań → Kraków,3940,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,11.04.2025 14:30,Powrót,4280,True
+Porsche 911 Carrera,Michał Kaczmarek,14.04.2025 07:45,Wrocław → Lublin,4280,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,14.04.2025 13:50,Powrót,4600,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,17.04.2025 08:20,Warszawa → Gdańsk,4600,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,17.04.2025 14:30,Powrót,4940,True
+Porsche 911 Carrera,Michał Kaczmarek,20.04.2025 07:50,Kraków → Warszawa,4940,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,20.04.2025 14:00,Powrót,5280,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,23.04.2025 08:10,Lublin → Poznań,5280,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,23.04.2025 14:10,Powrót,5620,True
+Porsche 911 Carrera,Michał Kaczmarek,26.04.2025 07:50,Wrocław → Kraków,5620,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,26.04.2025 14:00,Powrót,5960,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,29.04.2025 08:00,Warszawa → Lublin,5960,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,29.04.2025 14:10,Powrót,6300,True
+Porsche 911 Carrera,Michał Kaczmarek,02.05.2025 08:15,Poznań → Gdańsk,6300,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,02.05.2025 14:30,Powrót,6640,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,05.05.2025 07:45,Lublin → Kraków,6640,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,05.05.2025 14:00,Powrót,6980,True
+Porsche 911 Carrera,Michał Kaczmarek,08.05.2025 08:10,Warszawa → Wrocław,6980,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,08.05.2025 14:20,Powrót,7320,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,11.05.2025 07:50,Kraków → Lublin,7320,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,11.05.2025 14:10,Powrót,7660,True
+Porsche 911 Carrera,Anna Nowak,14.05.2025 08:00,Warszawa → Łódź,7660,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,14.05.2025 13:50,Powrót,7900,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,17.05.2025 08:20,Poznań → Kraków,7900,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,17.05.2025 14:30,Powrót,8240,True
+Porsche 911 Carrera,Michał Kaczmarek,20.05.2025 07:50,Wrocław → Warszawa,8240,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,20.05.2025 14:00,Powrót,8580,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,23.05.2025 08:10,Lublin → Poznań,8580,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,23.05.2025 14:10,Powrót,8920,True
+Porsche 911 Carrera,Michał Kaczmarek,26.05.2025 07:50,Warszawa → Kraków,8920,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,26.05.2025 14:00,Powrót,9260,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,29.05.2025 08:00,Poznań → Gdańsk,9260,Fałsz
+Porsche 911 Carrera,Michał Kaczmarek,29.05.2025 14:20,Powrót,9600,True
+Audi RS7,Magda Sikorska,01.03.2025 08:10,Warszawa → Kraków,0,Fałsz
+Audi RS7,Magda Sikorska,01.03.2025 13:40,Powrót,320,True
+Audi RS7,Magda Sikorska,04.03.2025 09:00,Poznań → Gdańsk,320,Fałsz
+Audi RS7,Magda Sikorska,04.03.2025 14:30,Powrót,670,Fałsz
+Audi RS7,Magda Sikorska,07.03.2025 08:20,Lublin → Warszawa,670,Fałsz
+Audi RS7,Magda Sikorska,07.03.2025 13:50,Powrót,920,True
+Audi RS7,Magda Sikorska,10.03.2025 08:10,Wrocław → Kraków,920,Fałsz
+Audi RS7,Magda Sikorska,10.03.2025 13:50,Powrót,1160,Fałsz
+Audi RS7,Paweł Malinowski,13.03.2025 09:10,Warszawa → Łódź,1160,Fałsz
+Audi RS7,Magda Sikorska,13.03.2025 14:00,Powrót,1390,Fałsz
+Audi RS7,Magda Sikorska,16.03.2025 08:00,Gdańsk → Poznań,1390,Fałsz
+Audi RS7,Magda Sikorska,16.03.2025 14:00,Powrót,1650,True
+Audi RS7,Magda Sikorska,19.03.2025 14:20,Powrót,1980,Fałsz
+Audi RS7,Magda Sikorska,22.03.2025 08:10,Poznań → Gdańsk,1980,Fałsz
+Audi RS7,Magda Sikorska,22.03.2025 14:30,Powrót,2310,True
+Audi RS7,Paweł Malinowski,25.03.2025 08:05,Lublin → Warszawa,2310,Fałsz
+Audi RS7,Magda Sikorska,25.03.2025 13:50,Powrót,2640,Fałsz
+Audi RS7,Magda Sikorska,28.03.2025 08:20,Wrocław → Kraków,2640,Fałsz
+Audi RS7,Magda Sikorska,28.03.2025 14:10,Powrót,2970,True
+Audi RS7,Magda Sikorska,31.03.2025 08:15,Warszawa → Lublin,2970,Fałsz
+Audi RS7,Magda Sikorska,31.03.2025 14:00,Powrót,3300,Fałsz
+Audi RS7,Paweł Malinowski,03.04.2025 08:05,Poznań → Gdańsk,3300,Fałsz
+Audi RS7,Magda Sikorska,03.04.2025 14:10,Powrót,3630,True
+Audi RS7,Magda Sikorska,06.04.2025 08:20,Lublin → Warszawa,3630,Fałsz
+Audi RS7,Magda Sikorska,06.04.2025 13:55,Powrót,3960,Fałsz
+Audi RS7,Magda Sikorska,09.04.2025 08:10,Wrocław → Kraków,3960,Fałsz
+Audi RS7,Magda Sikorska,09.04.2025 14:05,Powrót,4290,True
+Audi RS7,Paweł Malinowski,12.04.2025 08:00,Warszawa → Gdańsk,4290,Fałsz
+Audi RS7,Magda Sikorska,12.04.2025 14:10,Powrót,4620,Fałsz
+Audi RS7,Magda Sikorska,15.04.2025 08:20,Lublin → Poznań,4620,Fałsz
+Audi RS7,Magda Sikorska,15.04.2025 14:30,Powrót,4950,True
+Audi RS7,Magda Sikorska,18.04.2025 08:15,Warszawa → Kraków,4950,Fałsz
+Audi RS7,Magda Sikorska,18.04.2025 14:10,Powrót,5280,Fałsz
+Audi RS7,Paweł Malinowski,21.04.2025 08:05,Poznań → Gdańsk,5280,Fałsz
+Audi RS7,Magda Sikorska,21.04.2025 14:20,Powrót,5610,True
+Audi RS7,Magda Sikorska,24.04.2025 08:10,Lublin → Warszawa,5610,Fałsz
+Audi RS7,Magda Sikorska,24.04.2025 13:55,Powrót,5940,Fałsz
+Audi RS7,Magda Sikorska,27.04.2025 08:15,Wrocław → Kraków,5940,Fałsz
+Audi RS7,Magda Sikorska,27.04.2025 14:10,Powrót,6270,True
+Audi RS7,Magda Sikorska,30.04.2025 08:20,Warszawa → Lublin,6270,Fałsz
+Audi RS7,Magda Sikorska,30.04.2025 14:05,Powrót,6600,Fałsz
+Audi RS7,Paweł Malinowski,03.05.2025 08:10,Poznań → Gdańsk,6600,Fałsz
+Audi RS7,Magda Sikorska,03.05.2025 14:20,Powrót,6930,True
+Audi RS7,Magda Sikorska,06.05.2025 08:15,Lublin → Warszawa,6930,Fałsz
+Audi RS7,Magda Sikorska,06.05.2025 13:55,Powrót,7260,Fałsz
+Audi RS7,Magda Sikorska,09.05.2025 08:10,Wrocław → Kraków,7260,Fałsz
+Audi RS7,Magda Sikorska,09.05.2025 14:05,Powrót,7590,True
+Audi RS7,Paweł Malinowski,12.05.2025 08:00,Warszawa → Gdańsk,7590,Fałsz
+Audi RS7,Magda Sikorska,12.05.2025 14:10,Powrót,7920,Fałsz
+Audi RS7,Magda Sikorska,15.05.2025 08:20,Lublin → Poznań,7920,Fałsz
+Audi RS7,Magda Sikorska,15.05.2025 14:30,Powrót,8250,True
+Audi RS7,Magda Sikorska,18.05.2025 08:15,Warszawa → Kraków,8250,Fałsz
+Audi RS7,Magda Sikorska,18.05.2025 14:10,Powrót,8580,Fałsz
+Audi RS7,Paweł Malinowski,21.05.2025 08:05,Poznań → Gdańsk,8580,Fałsz
+Audi RS7,Magda Sikorska,21.05.2025 14:20,Powrót,8910,True
+Audi RS7,Magda Sikorska,24.05.2025 08:10,Lublin → Warszawa,8910,Fałsz
+Audi RS7,Magda Sikorska,24.05.2025 13:55,Powrót,9240,Fałsz
+Audi RS7,Magda Sikorska,27.05.2025 08:15,Wrocław → Kraków,9240,Fałsz
+Audi RS7,Magda Sikorska,27.05.2025 14:10,Powrót,9570,True

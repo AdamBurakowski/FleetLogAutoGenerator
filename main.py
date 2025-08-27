@@ -196,7 +196,9 @@ class MainWindow(QMainWindow):
         else:
             args = []
 
-        raport_generate(self.aggregated_df, args)
+        path = self.settings.value("export_location_path", "")
+
+        raport_generate(self.aggregated_df, args, path)
 
     def manual_export(self):
         new_window = ManualExport(self)
@@ -479,6 +481,6 @@ def update_date_range(self):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
-    window.show()
+    window.showMaximized()
     sys.exit(app.exec())
 

@@ -1,6 +1,7 @@
 import pandas as pd
 import locale
 import calendar
+import os
 from datetime import datetime
 from reportlab.platypus import (
     SimpleDocTemplate, Table, TableStyle,
@@ -52,7 +53,7 @@ def aggregate_trips(file):
 
     return result
 
-def raport_generate(df, other_data=[]):
+def raport_generate(df, other_data=[], save_path=""):
     locale.setlocale(locale.LC_TIME, 'pl_PL.UTF-8')
     styles = getSampleStyleSheet()
     pdfmetrics.registerFont(TTFont('DejaVu', 'DejaVuSerif.ttf'))
@@ -216,6 +217,8 @@ def raport_generate(df, other_data=[]):
 
     title_para = Paragraph(title_text, title_style)
     spacer = Spacer(1, 20)
+    os.makedirs(save_path, exist_ok=True)
+    filename = os.path.join(save_path, filename)
     doc = SimpleDocTemplate(filename, pagesize=A4, rightMargin=20, leftMargin=20, topMargin=20, bottomMargin=20)
     table = Table(data, colWidths=col_widths, repeatRows=1, rowHeights=[header_row_height] + [data_row_height]*(len(data)-1))
 

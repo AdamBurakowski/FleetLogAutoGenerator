@@ -370,17 +370,27 @@ class ConfigManagement(QGroupBox):
         self.main_window = main_window
         self.setWindowTitle("Manage Config")
         self.init_ui()
-        self.original_path = self.path_edit.text()  # Track original value
+        self.original_drivers_path = self.drivers_path_edit.text()  # Track original value
+        self.original_exports_path = self.exports_path_edit.text()  # Track original value
 
     def init_ui(self):
-        self.label = QLabel("Ścieżka prowadząca do mapy kierowców i pojazdów")
-        self.path_edit = QLineEdit()
+        self.drivers_label = QLabel("Ścieżka prowadząca do mapy kierowców i pojazdów")
+        self.drivers_path_edit = QLineEdit()
 
-        saved_path = self.main_window.settings.value("drivers_data_path", "")
-        self.path_edit.setText(saved_path)
+        saved_drivers_path = self.main_window.settings.value("drivers_data_path", "")
+        self.drivers_path_edit.setText(saved_drivers_path)
 
-        self.browse_button = QPushButton("Browse")
-        self.browse_button.clicked.connect(self.browse_for_path)
+        self.browse_drivers_button = QPushButton("Browse")
+        self.browse_drivers_button.clicked.connect(lambda: self.browse_for_path(self.drivers_path_edit))
+
+        self.exports_label = QLabel("Ścieżka prowadząca do miejsca zapisu raportów")
+        self.exports_path_edit = QLineEdit()
+
+        saved_exports_path = self.main_window.settings.value("export_location_path", "")
+        self.exports_path_edit.setText(saved_exports_path)
+
+        self.browse_exports_button = QPushButton("Browse")
+        self.browse_exports_button.clicked.connect(lambda: self.browse_for_path(self.exports_path_edit))
 
         self.save_button = QPushButton("Save")
         self.save_button.clicked.connect(self.save_changes)
@@ -388,34 +398,43 @@ class ConfigManagement(QGroupBox):
         self.exit_button = QPushButton("Exit")
         self.exit_button.clicked.connect(self.exit_config)
 
-        h_layout = QHBoxLayout()
-        h_layout.addWidget(self.path_edit)
-        h_layout.addWidget(self.browse_button)
+        drivers_layout = QHBoxLayout()
+        drivers_layout.addWidget(self.drivers_path_edit)
+        drivers_layout.addWidget(self.browse_drivers_button)
+
+        exports_layout = QHBoxLayout()
+        exports_layout.addWidget(self.exports_path_edit)
+        exports_layout.addWidget(self.browse_exports_button)
 
         button_layout = QHBoxLayout()
         button_layout.addWidget(self.save_button)
         button_layout.addWidget(self.exit_button)
 
         v_layout = QVBoxLayout()
-        v_layout.addWidget(self.label)
-        v_layout.addLayout(h_layout)
+        v_layout.addWidget(self.drivers_label)
+        v_layout.addLayout(drivers_layout)
+        v_layout.addWidget(self.exports_label)
+        v_layout.addLayout(exports_layout)
         v_layout.addLayout(button_layout)
 
         self.setLayout(v_layout)
 
-    def browse_for_path(self):
-        new_path = QFileDialog.getExistingDirectory(self, "Select Directory", self.path_edit.text())
+    def browse_for_path(self, path_edit: QLineEdit):
+        new_path = QFileDialog.getExistingDirectory(self, "Select Directory", path_edit.text())
         if new_path:
-            self.path_edit.setText(new_path)
+            path_edit.setText(new_path)
 
     def save_changes(self):
-        new_path = self.path_edit.text()
-        self.main_window.settings.setValue("drivers_data_path", new_path)
-        self.original_path = new_path  # Update original after saving
+        new_drivers_path = self.drivers_path_edit.text()
+        self.main_window.settings.setValue("drivers_data_path", new_drivers_path)
+        self.original_drivers_path = new_drivers_path  # Update original after saving
+        new_exports_path = self.exports_path_edit.text()
+        self.main_window.settings.setValue("export_location_path", new_exports_path)
+        self.original_exports_path = new_exports_path  # Update original after saving
         QMessageBox.information(self, "Saved", "Configuration has been saved.")
 
     def exit_config(self):
-        if self.path_edit.text() != self.original_path:
+        if self.drivers_path_edit.text() != self.original_drivers_path:
             reply = QMessageBox.question(
                 self, "Unsaved Changes",
                 "You have unsaved changes. Do you want to save before exiting?",

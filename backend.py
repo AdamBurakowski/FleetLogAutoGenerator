@@ -3,6 +3,7 @@ from PySide6.QtCore import (
     QSortFilterProxyModel, QModelIndex
 )
 import pandas as pd
+import uuid
 
 
 def proxy_to_df(proxy):
@@ -65,6 +66,9 @@ class IDFilterProxyModel(QSortFilterProxyModel):
 class PandasModel(QAbstractTableModel):
     def __init__(self, df=pd.DataFrame(), locked=False):
         super().__init__()
+        if "_id" not in df.columns:
+            df = df.copy()
+            df['_id'] = [str(uuid.uuid4()) for _ in range(len(df))]
         self._df = df.copy(deep=True)
         self._original_df = df.copy(deep=True)
         self._undo_stack = []
@@ -81,24 +85,29 @@ class PandasModel(QAbstractTableModel):
         return len(self._df.index)
 
     def columnCount(self, parent=None):
-        return len(self._df.columns)
+        return len(self._df.columns) - 1  # hide _id
 
     def data(self, index, role=Qt.DisplayRole):
         if index.isValid() and role == Qt.DisplayRole:
-            return str(self._df.iat[index.row(), index.column()])
+            visible_col = index.column()
+            actual_cols = [c for c in self._df.columns if c != "_id"]
+            col_name = actual_cols[visible_col]
+            return str(self._df.iat[index.row(), self._df.columns.get_loc(col_name)])
         return None
 
     def setData(self, index, value, role=Qt.EditRole):
         if self._locked:
             return False
         if index.isValid() and role == Qt.EditRole:
-            old_value = self._df.iat[index.row(), index.column()]
+            visible_cols = [c for c in self._df.columns if c != "_id"]
+            col_name = visible_cols[index.column()]
+            old_value = self._df.at[index.row(), col_name]
             if value == old_value:
                 return False
-            self._df.iat[index.row(), index.column()] = value
+            self._df.at[index.row(), col_name] = value
             self.dataChanged.emit(index, index, [Qt.DisplayRole])
             # store both old and new values
-            self._undo_stack.append(('edit', index.row(), index.column(), old_value, value))
+            self._undo_stack.append(('edit', index.row(), col_name, old_value, value))
             self._redo_stack.clear()
             return True
         return False
@@ -113,21 +122,25 @@ class PandasModel(QAbstractTableModel):
         if role != Qt.DisplayRole:
             return None
         if orientation == Qt.Horizontal:
-            return str(self._df.columns[section])
+            visible_cols = [c for c in self._df.columns if c != "_id"]
+            return str(visible_cols[section])
         else:
             return str(self._df.index[section])
 
     def revert_cell(self, row, col):
         if self._locked:
             return False
-        old_value = self._df.iat[row, col]
-        new_value = self._original_df.iat[row, col]
+        visible_cols = [c for c in self._df.columns if c != "_id"]
+        col_name = visible_cols[col]
+        row_id = self._df.at[row, "_id"]
+        old_value = self._df.at[row, col_name]
+        new_value = self._original_df.loc[self._original_df['_id'] == row_id, col_name].values[0]
         if old_value == new_value:
             return
-        self._df.iat[row, col] = new_value
+        self._df.at[row, col_name] = new_value
         index = self.index(row, col)
         self.dataChanged.emit(index, index, [Qt.DisplayRole])
-        self._undo_stack.append(('edit', row, col, old_value, new_value))
+        self._undo_stack.append(('edit', row, col_name, old_value, new_value))
         self._redo_stack.clear()
 
     def insert_row(self, row):
@@ -135,12 +148,16 @@ class PandasModel(QAbstractTableModel):
             return False
         self.beginInsertRows(QModelIndex(), row, row)
         new_row = pd.Series([None]*self._df.shape[1], index=self._df.columns)
+        new_row['_id'] = str(uuid.uuid4())
         self._df = pd.concat([
             self._df.iloc[:row],
             pd.DataFrame([new_row]),
             self._df.iloc[row:]
         ]).reset_index(drop=True)
-        self._original_df = self._original_df.reindex(range(len(self._df)))
+        self._original_df = pd.concat([
+            self._original_df,
+            pd.DataFrame([new_row])],
+            ignore_index=True)
         self.endInsertRows()
         # store inverse action for undo
         self._undo_stack.append(('insert_row', row, new_row))
@@ -154,7 +171,6 @@ class PandasModel(QAbstractTableModel):
         deleted_row_data = self._df.iloc[row].copy()
         self.beginRemoveRows(QModelIndex(), row, row)
         self._df = self._df.drop(row).reset_index(drop=True)
-        self._original_df = self._original_df.reindex(range(len(self._df)))
         self.endRemoveRows()
         # store inverse action for undo
         self._undo_stack.append(('delete_row', row, deleted_row_data))
@@ -182,24 +198,24 @@ class PandasModel(QAbstractTableModel):
         atype = action[0]
 
         if atype == 'edit':
-            row, col, old_value, new_value = action[1], action[2], action[3], action[4]
+            row, col_name, old_value, new_value = action[1], action[2], action[3], action[4]
             if undo:
-                self._df.iat[row, col] = old_value
-                self._redo_stack.append(('edit', row, col, old_value, new_value))
+                self._df.at[row, col_name] = old_value
+                self._redo_stack.append(('edit', row, col_name, old_value, new_value))
             else:
-                self._df.iat[row, col] = new_value
-                self._undo_stack.append(('edit', row, col, old_value, new_value))
-            index = self.index(row, col)
+                self._df.at[row, col_name] = new_value
+                self._undo_stack.append(('edit', row, col_name, old_value, new_value))
+            index = self.index(row, [c for c in self._df.columns if c != "_id"].index(col_name))
             self.dataChanged.emit(index, index, [Qt.DisplayRole])
 
-        elif atype == 'insert_row':
+        elif atype == "insert_row":
             row, row_data = action[1], action[2]
             if undo:
                 self.beginRemoveRows(QModelIndex(), row, row)
-                self._df = self._df.drop(row).reset_index(drop=True)
-                self._original_df = self._original_df.reindex(range(len(self._df)))
+                row_id = row_data["_id"]
+                self._df = self._df[self._df['_id'] != row_id].reset_index(drop=True)
                 self.endRemoveRows()
-                self._redo_stack.append(('insert_row', row, row_data))
+                self._redo_stack.append(("insert_row", row, row_data))
             else:
                 self.beginInsertRows(QModelIndex(), row, row)
                 self._df = pd.concat([
@@ -207,11 +223,14 @@ class PandasModel(QAbstractTableModel):
                     pd.DataFrame([row_data]),
                     self._df.iloc[row:]
                 ]).reset_index(drop=True)
-                self._original_df = self._original_df.reindex(range(len(self._df)))
+                self._original_df = pd.concat([
+                    self._original_df,
+                    pd.DataFrame([row_data])],
+                    ignore_index=True)
                 self.endInsertRows()
-                self._undo_stack.append(('insert_row', row, row_data))
+                self._undo_stack.append(("insert_row", row, row_data))
 
-        elif atype == 'delete_row':
+        elif atype == "delete_row":
             row, row_data = action[1], action[2]
             if undo:
                 self.beginInsertRows(QModelIndex(), row, row)
@@ -220,13 +239,11 @@ class PandasModel(QAbstractTableModel):
                     pd.DataFrame([row_data]),
                     self._df.iloc[row:]
                 ]).reset_index(drop=True)
-                self._original_df = self._original_df.reindex(range(len(self._df)))
                 self.endInsertRows()
-                self._redo_stack.append(('delete_row', row, row_data))
+                self._redo_stack.append(("delete_row", row, row_data))
             else:
                 self.beginRemoveRows(QModelIndex(), row, row)
                 self._df = self._df.drop(row).reset_index(drop=True)
-                self._original_df = self._original_df.reindex(range(len(self._df)))
                 self.endRemoveRows()
-                self._undo_stack.append(('delete_row', row, row_data))
+                self._undo_stack.append(("delete_row", row, row_data))
 

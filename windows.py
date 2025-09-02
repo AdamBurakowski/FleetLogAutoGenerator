@@ -208,7 +208,18 @@ class DragDropWindow(QWidget):
         try:
             df = pd.read_csv(path)
             if (self.mode == "file"):
+                required_cols = {
+                "Pojazd", "Kierowca", "Data i Godzina",
+                "Cel Trasy", "Stan Licznika", "Tankowanie"
+                }
+
+                if not required_cols.issubset(df.columns):
+                    missing = required_cols - set(df.columns)
+                    self.show_toast(f"CSV is missing columns: {', '.join(missing)}")
+                    return
+
                 if getattr(self.main_window, "df", None) is not None:
+                    # The idea is to create new instance of main window
                     self.show_toast("womp womp — MainWindow already has a DataFrame.")
                     return
                 else:

@@ -172,8 +172,7 @@ class PandasModel(QAbstractTableModel):
             pd.DataFrame([new_row])],
             ignore_index=True)
         self.endInsertRows()
-
-        # Record for undo
+        # store inverse action for undo
         self._undo_stack.append(('insert_row', row, new_row))
         self._redo_stack.clear()
 

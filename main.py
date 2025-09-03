@@ -285,13 +285,18 @@ class MainWindow(QMainWindow):
 
                     insert_above_action = QAction("Insert row above", self)
                     insert_above_action.triggered.connect(
-                        lambda: self.model.insert_row(index.row())
+                        lambda: self.model.insert_row(
+                            index, copy_columns=["Pojazd", "Data i Godzina"]
+                        )
                     )
                     menu.addAction(insert_above_action)
 
                     insert_below_action = QAction("Insert row below", self)
                     insert_below_action.triggered.connect(
-                        lambda: self.model.insert_row(index.row() + 1)
+                        lambda: self.model.insert_row(
+                            index.siblingAtRow(index.row() + 1),
+                            copy_columns=["Pojazd", "Data i Godzina"]
+                        )
                     )
                     menu.addAction(insert_below_action)
 

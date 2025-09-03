@@ -143,12 +143,25 @@ class PandasModel(QAbstractTableModel):
         self._undo_stack.append(('edit', row, col_name, old_value, new_value))
         self._redo_stack.clear()
 
-    def insert_row(self, row):
+
+    def insert_row(self, proxy_index, copy_columns=None):
         if self._locked:
             return False
-        self.beginInsertRows(QModelIndex(), row, row)
+
+        source_model = self
+        row = proxy_index.row()
+
+        if hasattr(proxy_index.model(), 'mapToSource'):
+            row = proxy_index.model().mapToSource(proxy_index).row()
+
         new_row = pd.Series([None]*self._df.shape[1], index=self._df.columns)
         new_row['_id'] = str(uuid.uuid4())
+
+        if copy_columns:
+            for col in copy_columns:
+                new_row[col] = self._df.at[row, col]
+
+        self.beginInsertRows(QModelIndex(), row, row)
         self._df = pd.concat([
             self._df.iloc[:row],
             pd.DataFrame([new_row]),
@@ -159,9 +172,11 @@ class PandasModel(QAbstractTableModel):
             pd.DataFrame([new_row])],
             ignore_index=True)
         self.endInsertRows()
-        # store inverse action for undo
+
+        # Record for undo
         self._undo_stack.append(('insert_row', row, new_row))
         self._redo_stack.clear()
+
 
     def delete_row(self, row):
         if self._locked:
